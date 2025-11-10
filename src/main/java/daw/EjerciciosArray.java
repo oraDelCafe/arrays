@@ -102,6 +102,30 @@ public class EjerciciosArray {
         JOptionPane.showMessageDialog(null, "Estos arrays son  iguales ? " + pregunta);
         // false
 
+        /*
+         * 6- Funcion que recibe un String. Lo transforma a array de char 
+         * y devuelve si es un palindramo. Nombre de funcion esPalindromo
+         * 
+         */
+        
+        System.out.println(esPalindromo("oso"));
+        System.out.println(esPalindromo("banan"));
+        System.out.println(esPalindromo("osooso"));
 
+    }
+
+    public static boolean  esPalindromo(String texto) {
+        
+        int j = texto.toCharArray().length-1; 
+        for (int i = 0; i <= texto.toCharArray().length-1 ; i++) {
+            
+            if (texto.toCharArray()[i] != texto.toCharArray()[j]) {
+                return false;
+            }
+            j --;
+        }
+
+        return true;
+        
     }
 }

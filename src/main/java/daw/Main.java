@@ -87,11 +87,7 @@ public class Main {
             
         } while (true);
 
-        /*
-         * 6- Funcion que recibe un String. Lo transforma a array de char 
-         * y devuelve si es un palindramo. Nombre de funcion esPalindromo
-         * 
-         */
+        
         
     }
 }
