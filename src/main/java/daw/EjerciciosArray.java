@@ -21,14 +21,14 @@ public class EjerciciosArray {
         int[] arrayInt3 = { 1, 2, 3, 9, 5 };
         int[] arrayInt4 = { 1, 2, 4, 9, 5 };
         /*
-        *Ejercicio 1 
+        * Ejercicio 1 
         * Funcion recibe array int y devuelva valor maximo
         */
         int resultadoMax = Funciones.valorMaximo(arrayInt);
         System.out.println("El valor maximo es: " + resultadoMax);
 
         /*
-         *Ejercicio 2 
+         * Ejercicio 2 
          * Funcion recibe array int y devuelva valor maximo
          */
         int resultadoMin = Funciones.valorMinimo(arrayInt);
@@ -36,12 +36,12 @@ public class EjerciciosArray {
 
 
         /*
-         *Ejercicio 3 
+         * Ejercicio 3 
          * Funcion recibe array double y un numero muestra
          * el array en el main antes y despues de de llamar a la funcion
          *
          */
-        double[] arrayDouble = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        double[] arrayDouble = { 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0 };
 
 
         JOptionPane.showMessageDialog(null, "Array antes de cambiar");
@@ -51,6 +51,7 @@ public class EjerciciosArray {
         System.out.println("Array 2 ");
         JOptionPane.showMessageDialog(null, "Array despues de cambiar");
         Funciones.muestroArray(Funciones.multiplicaArray(arrayDouble, 2));
+
         /*
          * Ejercicio 4 
          * Función que recibe un tamñao y genera un array de letras aleatorias
@@ -79,6 +80,10 @@ public class EjerciciosArray {
         /*
          *Ejercicio 5 
          * funcion que recibe 2 array de string y comprueba si son iguales
+         * int[] arrayInt = { 1, 2, 3, 9, 5 };
+        int[] arrayInt2 = { 1, 2, 3, 9 };
+        int[] arrayInt3 = { 1, 2, 3, 9, 5 };
+        int[] arrayInt4 = { 1, 2, 4, 9, 5 };
          */
 
         boolean pregunta = Funciones.sonIguales(arrayInt, arrayInt2);

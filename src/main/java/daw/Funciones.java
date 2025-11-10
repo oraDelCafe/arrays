@@ -52,37 +52,9 @@ public class Funciones {
     }
 
 
-    public static int[] inicializarArray() {
-        // inicializo array
-        int tamanio = 0;
-        int[] arrayInt;
-        do {
-
-
-            try {
-                // separo el control de exception para poder controlar 2 cosas distintas.
-                if (tamanio < 0) {
-                    // tamaño es 0 o negativo
-                    JOptionPane.showMessageDialog(null, "Tamaño negativo");
-                    tamanio = Integer
-                            .parseInt(JOptionPane.showInputDialog("Introduce un tamaño positivo y mayor a 0 "));
-                }
-                if (tamanio == 0) {
-                    // tamaño menor a 1
-                    JOptionPane.showMessageDialog(null, "Tamaño tiene que ser mayor a 0");
-                } else {
-                    // tamaño es mayor a 1
-                    break;
-                }
-
-
-            } catch (NumberFormatException nfe) {
-                // quitamos un numero a i String[] argspara que repita el bucle
-                JOptionPane.showMessageDialog(null, "No has introducido un numero");
-            }
-
-
-        } while (true);
+    public static int[] inicializarArray(int tamanio) {
+        //Importante controlar el tamaño antes de inicializar array
+        int[] arrayInt; 
         arrayInt = new int[tamanio];
         System.out.println("El tamaño es " + arrayInt.length);
         return arrayInt;
@@ -313,7 +285,7 @@ public class Funciones {
                 // si lo que contiene no es lo mismo devuelvo false
                 texto = """
                         Contenido distinto:
-                        Posicion = %d
+                        En la posicion = %d
                         Array 1 = %d
                         Array 2 = %d
                         """.formatted(i, arrayInt[i], arrayInt2[i]);
@@ -333,7 +305,11 @@ public class Funciones {
 
 
     public static int valorMaximo(int[] arrayInt) {
-        int numero = 0;
+        /*
+         * Coje el valor maximo del array 
+         * recibe Array y devuelve int
+         */
+        int numero = Integer.MIN_VALUE;
         for (int i = 0; i < arrayInt.length; i++) {
             if (arrayInt[i] > numero) {
                 numero = arrayInt[i];
@@ -346,7 +322,11 @@ public class Funciones {
 
 
     public static int valorMinimo(int[] arrayInt) {
-        int numero = 100000;
+        /*
+         * Coje el valor minimo del array 
+         * recibe Array y devuelve int
+         */
+        int numero = Integer.MAX_VALUE;
         for (int i = 0; i < arrayInt.length; i++) {
             if (arrayInt[i] < numero) {
                 numero = arrayInt[i];
@@ -361,21 +341,21 @@ public class Funciones {
     public static double[] multiplicaArray(double[] arrayInt, int numero) {
         for (int i = 0; i < arrayInt.length; i++) {
             arrayInt[i] *= numero;
-
-
         }
         return arrayInt;
-
-
     }
 
+    public static boolean tamanioArray(int[] array) {
+        /*
+         * Compruebo tamaño del array si es valido true.
+         */
+        return array.length >=1;
+    }
 
     public static int comprueboTamanio(int tamanio) {
         // introduce tamaño y compruebo que sea mayor que 0
 
-
         do {
-
 
             try {
                 // separo el control de exception para poder controlar 2 cosas distintas.
@@ -387,7 +367,7 @@ public class Funciones {
                 }
                 if (tamanio == 0) {
                     // tamaño menor a 1
-                    JOptionPane.showMessageDialog(null, "Tamaño tiene que ser mayor a 0");
+                    JOptionPane.showMessageDialog(null, "Tamaño del array tiene que ser mayor a 0");
                 } else {
                     // tamaño es mayor a 0
                     break;

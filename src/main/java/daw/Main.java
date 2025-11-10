@@ -61,7 +61,7 @@ public class Main {
          * Funcion que recibe un array de char y devielve la posicion en la que se encuentra el 
          * char que se pasa como parametro o -1 si no esta en el array
          */
-        
+
         Scanner sc = new Scanner(System.in);
 
         char[] arrayChar = {'a','b','c'};
@@ -72,11 +72,11 @@ public class Main {
         System.out.println(  letraBuscada.toCharArray().length );
         if (letraBuscada.toCharArray().length >1) {
             // si la letra es mayor a 1 
-            JOptionPane.showMessageDialog(null, "Buscamos una letre no un texto");
+            JOptionPane.showMessageDialog(null, "Buscamos una letra no un texto");
         }
         if (letraBuscada.toCharArray().length < 0) {
-            // si la letra es mayor a 1 
-            JOptionPane.showMessageDialog(null, "Buscamos una letre no un texto");
+            // si la letra es menor a 0 
+            JOptionPane.showMessageDialog(null, "Buscamos una letra no un texto");
         }
 
         char letraBuscadaChar = letraBuscada.charAt(0);
@@ -87,7 +87,10 @@ public class Main {
             
         } while (true);
 
-        
+        /*
+         * 6- Funcion que recibe un String. Lo transforma a array de char 
+         * y devuelve si es un palindramo. Nombre de funcion esPalindromo
+         */
         
     }
 }
