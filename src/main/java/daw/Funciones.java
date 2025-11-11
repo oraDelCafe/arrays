@@ -391,30 +391,38 @@ public class Funciones {
         // inicializo array y doy letras aleatorias
         char[] arrayChar;
 
-
         tamanio = comprueboTamanio(tamanio);
         // comprueba tamaño del array
 
-
         arrayChar = new char[tamanio];
-
 
         System.out.println("El tamaño es " + arrayChar.length);
 
 
         for (int i = 0; i < arrayChar.length; i++) {
 
-
             arrayChar[i] = (char) r.nextInt(97, 123);
             // al char ser primitivo se puede castear
 
-
         }
-
 
         return arrayChar;
 
+    }
 
+    public static boolean  esPalindromo(String texto) {
+        
+        int j = texto.toCharArray().length-1; 
+        for (int i = 0; i < texto.toCharArray().length ; i++) {   
+            if (texto.toCharArray()[i] != texto.toCharArray()[j]) {
+                // no son iguales return false 
+                return false;
+            }
+            j --;
+        }
+        //son iguales
+        return true;
+        
     }
 
 

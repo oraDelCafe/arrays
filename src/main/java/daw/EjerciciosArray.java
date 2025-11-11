@@ -108,24 +108,11 @@ public class EjerciciosArray {
          * 
          */
         
-        System.out.println(esPalindromo("oso"));
-        System.out.println(esPalindromo("banan"));
-        System.out.println(esPalindromo("osooso"));
+        System.out.println(Funciones.esPalindromo("oso"));
+        System.out.println(Funciones.esPalindromo("banan"));
+        System.out.println(Funciones.esPalindromo("osooso"));
 
     }
 
-    public static boolean  esPalindromo(String texto) {
-        
-        int j = texto.toCharArray().length-1; 
-        for (int i = 0; i <= texto.toCharArray().length-1 ; i++) {
-            
-            if (texto.toCharArray()[i] != texto.toCharArray()[j]) {
-                return false;
-            }
-            j --;
-        }
-
-        return true;
-        
-    }
+    
 }
