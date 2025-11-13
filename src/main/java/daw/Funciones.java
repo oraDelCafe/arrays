@@ -1,11 +1,9 @@
 package daw;
 
-
+import java.util.Arrays;
 import java.util.Random;
 
-
 import javax.swing.JOptionPane;
-
 
 public class Funciones {
     // crear funcion de rellenar array
@@ -17,11 +15,9 @@ public class Funciones {
                 3- Encuentra un número
                 """;
 
-
         JOptionPane.showMessageDialog(null, texto);
         // imprimo el texto que vamos a usar en el programa
     }
-
 
     public static int preguntoOpcion() {
         // pregunto opciones y devuelvo
@@ -30,7 +26,6 @@ public class Funciones {
             try {
                 opcionInt = Integer.parseInt(JOptionPane.showInputDialog("¿Que opcion quieres? (1/3)"));
 
-
                 if (!(opcionInt > 0 && opcionInt < 4)) {
                     JOptionPane.showMessageDialog(null,
                             "Numero fuera de rango" + opcionInt + "\nEl rango es del (1/3)");
@@ -38,30 +33,24 @@ public class Funciones {
                 break;
                 // si llega hasta aqui esta bien y sale el bucle
 
-
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Has metido una letra");
                 // TODO: handle exception
             }
 
-
         } while (true);
-
 
         return opcionInt;
     }
 
-
     public static int[] inicializarArray(int tamanio) {
-        //Importante controlar el tamaño antes de inicializar array
-        int[] arrayInt; 
+        // Importante controlar el tamaño antes de inicializar array
+        int[] arrayInt;
         arrayInt = new int[tamanio];
         System.out.println("El tamaño es " + arrayInt.length);
         return arrayInt;
 
-
     }
-
 
     public static int[] rellenoArray(int[] arrayInt) {
         int numero = 0;
@@ -84,32 +73,38 @@ public class Funciones {
             }
         }
 
-
         return arrayInt;
     }
-
 
     public static void muestroArray(int[] arrayInt) {
         // Al meter un array ya esta inicializado al menos para mostrarlo tendría que
         // estarlo
         JOptionPane.showMessageDialog(null, "El array tiene un tamaño de " + arrayInt.length);
 
-
         for (int i = 0; i < arrayInt.length; i++) {
             // recorro el array y lo muestro
             JOptionPane.showMessageDialog(null, "Muesto la posicion " + i + " y su valor " + arrayInt[i]);
         }
 
-
     }
 
+    public static void muestroArrayConsolaNoln(int[] arrayInt) {
+        // Al meter un array ya esta inicializado al menos para mostrarlo tendría que
+        // estarlo
+        JOptionPane.showMessageDialog(null, "El array tiene un tamaño de " + arrayInt.length);
+
+        for (int i = 0; i < arrayInt.length; i++) {
+            // recorro el array y lo muestro
+            System.out.print("Posicion :" + i + "  valor : " + arrayInt[i] + " ");
+        }
+
+    }
 
     public static void muestroArray(char[] arrayChar) {
         // Al meter un array ya esta inicializado al menos para mostrarlo tendría que
         // estarlo
         // JOptionPane.showMessageDialog(null, "El array tiene un tamaño de " +
         // arrayChar.length);
-
 
         for (int i = 0; i < arrayChar.length; i++) {
             // recorro el array y lo muestro
@@ -118,15 +113,12 @@ public class Funciones {
             System.out.println("Muesto la posicion " + i + " y su valor " + arrayChar[i]);
         }
 
-
     }
-
 
     public static void muestroArray(double[] arrayDouble) {
         // muestra el array por la pantalla para recordar y comprobar datos
         // JOptionPane.showMessageDialog(null, "El array tiene un tamaño de " +
         // arrayDouble.length);
-
 
         for (int i = 0; i < arrayDouble.length; i++) {
             // recorro el array y lo muestro
@@ -135,15 +127,12 @@ public class Funciones {
             System.out.println("Muesto la posicion " + i + " y su valor " + arrayDouble[i]);
         }
 
-
     }
-
 
     public static void muestroArraySeparador(int[] arrayInt, String separador) {
         // Al meter un array ya esta inicializado al menos para mostrarlo tendría que
         // estarlo
         JOptionPane.showMessageDialog(null, "El array tiene un tamaño de " + arrayInt.length);
-
 
         for (int i = 0; i < arrayInt.length; i++) {
             // Recorro el array y lo muestro por pantalla
@@ -157,9 +146,7 @@ public class Funciones {
             }
         }
 
-
     }
-
 
     // Ejercicio de array para mañana
     /**
@@ -169,7 +156,6 @@ public class Funciones {
      * rellena random y buscar el 2
      */
     public static final Random r = new Random();
-
 
     public static void muestroSumaArray(int[] arrayInt) {
         // 1 Sumar los elementos de un array y mostrar
@@ -184,13 +170,10 @@ public class Funciones {
             System.out.println("Numero dentro del array " + arrayInt[i]);
             // imprimo i
 
-
         }
         System.out.println("La suma total" + suma);
 
-
     }
-
 
     public static void muestroMediaArray(int[] arrayInt) {
         // 2 Media aritmetica de los números de un array
@@ -205,14 +188,11 @@ public class Funciones {
             System.out.println("Numero dentro del array " + arrayInt[i]);
             // imprimo i
 
-
         }
         int calculoFinal = suma / arrayInt.length;
         System.out.println("Media aritmetica" + calculoFinal);
 
-
     }
-
 
     public static void muestroEncuentroNumeroArray(int[] arrayInt) {
         /*
@@ -233,7 +213,6 @@ public class Funciones {
             System.out.println("Numero dentro del array " + arrayInt[i]);
             // imprimo i
 
-
         }
         if (contador == 1) {
             System.out.println("Numero buscado: " + numeroBuscado + "aparece " + contador + "vez");
@@ -241,9 +220,7 @@ public class Funciones {
             System.out.println("Numero buscado: " + numeroBuscado + "aparece " + contador + "veces");
         }
 
-
     }
-
 
     public static int buscoUnaLetra(char[] arrayChar, char letraBuscada) {
         /*
@@ -262,12 +239,10 @@ public class Funciones {
         return -1;
     }
 
-
     public static boolean sonIguales(int[] arrayInt, int[] arrayInt2) {
         // funcion que recibe 2 array de string y comprueba si son iguales
         // voy a meter 2 Array y comprobar si son iguales
         String texto = "";
-
 
         if (arrayInt.length != arrayInt2.length) {
             // si el tamaño de los arrays no son iguales
@@ -300,13 +275,11 @@ public class Funciones {
         // si todo es igual devuelvo true
         return true;
 
-
     }
-
 
     public static int valorMaximo(int[] arrayInt) {
         /*
-         * Coje el valor maximo del array 
+         * Coje el valor maximo del array
          * recibe Array y devuelve int
          */
         int numero = Integer.MIN_VALUE;
@@ -317,13 +290,11 @@ public class Funciones {
         }
         return numero;
 
-
     }
-
 
     public static int valorMinimo(int[] arrayInt) {
         /*
-         * Coje el valor minimo del array 
+         * Coje el valor minimo del array
          * recibe Array y devuelve int
          */
         int numero = Integer.MAX_VALUE;
@@ -334,9 +305,7 @@ public class Funciones {
         }
         return numero;
 
-
     }
-
 
     public static double[] multiplicaArray(double[] arrayInt, int numero) {
         for (int i = 0; i < arrayInt.length; i++) {
@@ -349,7 +318,7 @@ public class Funciones {
         /*
          * Compruebo tamaño del array si es valido true.
          */
-        return array.length >=1;
+        return array.length >= 1;
     }
 
     public static int comprueboTamanio(int tamanio) {
@@ -373,19 +342,15 @@ public class Funciones {
                     break;
                 }
 
-
             } catch (NumberFormatException nfe) {
                 // quitamos un numero a i String[] argspara que repita el bucle
                 JOptionPane.showMessageDialog(null, "No has introducido un numero");
             }
 
-
         } while (true);
-
 
         return tamanio;
     }
-
 
     public static char[] inicializarArrayAleatorio(int tamanio) {
         // inicializo array y doy letras aleatorias
@@ -398,7 +363,6 @@ public class Funciones {
 
         System.out.println("El tamaño es " + arrayChar.length);
 
-
         for (int i = 0; i < arrayChar.length; i++) {
 
             arrayChar[i] = (char) r.nextInt(97, 123);
@@ -410,25 +374,81 @@ public class Funciones {
 
     }
 
-    public static boolean  esPalindromo(String texto) {
-        
-        int j = texto.toCharArray().length-1; 
-        for (int i = 0; i < texto.toCharArray().length ; i++) {   
+    public static boolean esPalindromo(String texto) {
+
+        int j = texto.toCharArray().length - 1;
+        for (int i = 0; i < texto.toCharArray().length; i++) {
             if (texto.toCharArray()[i] != texto.toCharArray()[j]) {
-                // no son iguales return false 
+                // no son iguales return false
                 return false;
             }
-            j --;
+            j--;
         }
-        //son iguales
+        // son iguales
         return true;
-        
+
     }
 
+    public static int[] arrayTamanioEspecifico(int numero) {
+        /*
+         * 7-crear una funcion que devuelva un array de tamñao especifico en el
+         * parametro con numeros aleatorio entre 1 y 30
+         */
+
+        numero = comprueboTamanio(numero);
+        // compruebo que sea mayor a 0 el tamaño y que introduce un numero
+
+        int[] arrayInt = new int[numero];
+        // inicializo el array
+
+        for (int i = 0; i < arrayInt.length; i++) {
+            // relleno con aleatorios
+            arrayInt[i] = r.nextInt(1, 31);
+
+        }
+
+        return arrayInt;
+    }
+
+    public static int[] comprueboValoresDuplicados(int[] arrayInt) {
+        /*
+         * 8-Funcion que recibe un array de numeros (array del paso 7 ) y devuelve un
+         * nuevo array sin duplicados
+         * arrayInt.clone();
+         */
+        int[] arrayInt2 = Arrays.copyOf(arrayInt, arrayInt.length);
+        int contador = 0, aux = 0;
+
+        for (int i = 0; i < arrayInt.length; i++) {
+            aux = arrayInt[i];
+            // en el auxilar le meto el contenido del array
+            for (int j = i; j < arrayInt.length; j++) {
+                if (aux == arrayInt[j]) {
+                    // si el ausiliar es igual que el contenido de arra
+                    arrayInt2[j] = -1;
+                    contador++;
+                    // si son iguale dejo -1
+                } else {
+                    arrayInt2[j] = arrayInt[i];
+                }
+            }
+        }
+
+        int[] respuestaArrays = new int[arrayInt.length - contador];
+        //
+        contador = 0;
+        for (int i = 0; i < arrayInt.length; i++) {
+            if (arrayInt2[i] != -1) {
+                // Si el contenido del array no es -1
+                respuestaArrays[contador] = arrayInt2[i];
+                // lo meto en el array respuesta
+                contador++;
+                // muevo la posicion del contador
+            }
+
+        }
+
+        return respuestaArrays;
+    }
 
 }
-
-
-
-
-
