@@ -95,7 +95,7 @@ public class Funciones {
 
         for (int i = 0; i < arrayInt.length; i++) {
             // recorro el array y lo muestro
-            System.out.print("Posicion :" + i + "  valor : " + arrayInt[i] + " ");
+            System.out.print("Posicion " + i + "  valor : " + arrayInt[i] + " ");
         }
 
     }
@@ -422,22 +422,22 @@ public class Funciones {
         for (int i = 0; i < arrayInt.length; i++) {
             aux = arrayInt[i];
             // en el auxilar le meto el contenido del array
-            for (int j = i; j < arrayInt.length; j++) {
+            for (int j = i+1; j < arrayInt.length; j++) {
                 if (aux == arrayInt[j]) {
                     // si el ausiliar es igual que el contenido de arra
                     arrayInt2[j] = -1;
+                    //lo voy marcando 
                     contador++;
-                    // si son iguale dejo -1
-                } else {
-                    arrayInt2[j] = arrayInt[i];
-                }
+                    // si son iguale dejo -1 
+                } 
             }
         }
 
-        int[] respuestaArrays = new int[arrayInt.length - contador];
-        //
+        int[] respuestaArrays = new int[ arrayInt.length - contador];
+        // resto al tamaño de array el contador para tener el nuevo tamaño
         contador = 0;
-        for (int i = 0; i < arrayInt.length; i++) {
+
+        for (int i = 0; i < arrayInt.length; i++) { 
             if (arrayInt2[i] != -1) {
                 // Si el contenido del array no es -1
                 respuestaArrays[contador] = arrayInt2[i];
