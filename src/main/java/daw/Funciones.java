@@ -414,7 +414,7 @@ public class Funciones {
         /*
          * 8-Funcion que recibe un array de numeros (array del paso 7 ) y devuelve un
          * nuevo array sin duplicados
-         * arrayInt.clone();
+         * arrayInt.clone(); Para copiar un array 
          */
         int[] arrayInt2 = Arrays.copyOf(arrayInt, arrayInt.length);
         int contador = 0, aux = 0;
@@ -493,7 +493,7 @@ public class Funciones {
                 } 
             }
         }
-        
+
         return arrayInt;
     }
 
