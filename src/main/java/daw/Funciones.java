@@ -410,7 +410,7 @@ public class Funciones {
         return arrayInt;
     }
 
-    public static int[] comprueboValoresDuplicados(int[] arrayInt) {
+    public static int[] quitarDuplicado(int[] arrayInt) {
         /*
          * 8-Funcion que recibe un array de numeros (array del paso 7 ) y devuelve un
          * nuevo array sin duplicados
@@ -423,7 +423,7 @@ public class Funciones {
             aux = arrayInt[i];
             // en el auxilar le meto el contenido del array
             for (int j = i+1; j < arrayInt.length; j++) {
-                if (aux == arrayInt[j]) {
+                if (aux == arrayInt[j]) { 
                     // si el ausiliar es igual que el contenido de arra
                     arrayInt2[j] = -1;
                     //lo voy marcando 
@@ -450,5 +450,52 @@ public class Funciones {
 
         return respuestaArrays;
     }
+
+    public static int[] metodoOrdenarArray(int[] arrayInt) {
+        /*
+         *Metodo ordena Array
+         */
+
+        int  aux = 0;
+        
+        for (int i = 0; i < arrayInt.length; i++) {
+            aux = arrayInt[i];
+            // en el auxilar le meto el contenido del array
+            for (int j = i+1; j < arrayInt.length; j++) {
+                if (aux > arrayInt[j]) { 
+                    // si el ausiliar es igual que el contenido de arra
+                    arrayInt[i]= arrayInt[j];
+                    arrayInt[j] = aux;
+                    i--;
+                    break;
+                } 
+            }
+        }
+               
+
+        return arrayInt;
+    }
+
+    public static int[] metodoBurbuja(int[] arrayInt) {
+        /*
+         * Metodo Burbuja
+         */
+        int  aux = 0;
+        
+        for (int i = 0; i < arrayInt.length-1; i++) {
+            aux = arrayInt[i];
+            // en el auxilar le meto el contenido del array
+            for (int j = i+1; j < arrayInt.length; j++) {
+                if (aux > arrayInt[j]) { 
+                    // si el ausiliar es igual que el contenido de arra
+                    arrayInt[i]= arrayInt[j];
+                    arrayInt[j] = aux; 
+                } 
+            }
+        }
+        
+        return arrayInt;
+    }
+
 
 }
