@@ -100,6 +100,15 @@ public class Funciones {
 
     }
 
+    public static void muestroArrayConsolaPV(int[] arrayInt) {
+        for (int i = 0; i < arrayInt.length; i++) {
+            // recorro el array y lo muestro
+            System.out.print("P: " + i + " v : " + arrayInt[i] + " | ");
+        }
+        System.out.println();
+
+    }
+
     public static void muestroArray(char[] arrayChar) {
         // Al meter un array ya esta inicializado al menos para mostrarlo tendría que
         // estarlo
@@ -414,7 +423,7 @@ public class Funciones {
         /*
          * 8-Funcion que recibe un array de numeros (array del paso 7 ) y devuelve un
          * nuevo array sin duplicados
-         * arrayInt.clone(); Para copiar un array 
+         * arrayInt.clone(); Para copiar un array
          */
         int[] arrayInt2 = Arrays.copyOf(arrayInt, arrayInt.length);
         int contador = 0, aux = 0;
@@ -422,22 +431,22 @@ public class Funciones {
         for (int i = 0; i < arrayInt.length; i++) {
             aux = arrayInt[i];
             // en el auxilar le meto el contenido del array
-            for (int j = i+1; j < arrayInt.length; j++) {
-                if (aux == arrayInt[j]) { 
+            for (int j = i + 1; j < arrayInt.length; j++) {
+                if (aux == arrayInt[j]) {
                     // si el ausiliar es igual que el contenido de arra
                     arrayInt2[j] = -1;
-                    //lo voy marcando 
+                    // lo voy marcando
                     contador++;
-                    // si son iguale dejo -1 
-                } 
+                    // si son iguale dejo -1
+                }
             }
         }
 
-        int[] respuestaArrays = new int[ arrayInt.length - contador];
+        int[] respuestaArrays = new int[arrayInt.length - contador];
         // resto al tamaño de array el contador para tener el nuevo tamaño
         contador = 0;
 
-        for (int i = 0; i < arrayInt.length; i++) { 
+        for (int i = 0; i < arrayInt.length; i++) {
             if (arrayInt2[i] != -1) {
                 // Si el contenido del array no es -1
                 respuestaArrays[contador] = arrayInt2[i];
@@ -453,25 +462,24 @@ public class Funciones {
 
     public static int[] metodoOrdenarArray(int[] arrayInt) {
         /*
-         *Metodo ordena Array
+         * Metodo ordena Array
          */
 
-        int  aux = 0;
-        
+        int aux = 0;
+
         for (int i = 0; i < arrayInt.length; i++) {
             aux = arrayInt[i];
             // en el auxilar le meto el contenido del array
-            for (int j = i+1; j < arrayInt.length; j++) {
-                if (aux > arrayInt[j]) { 
+            for (int j = i + 1; j < arrayInt.length; j++) {
+                if (aux > arrayInt[j]) {
                     // si el ausiliar es igual que el contenido de arra
-                    arrayInt[i]= arrayInt[j];
+                    arrayInt[i] = arrayInt[j];
                     arrayInt[j] = aux;
                     i--;
                     break;
-                } 
+                }
             }
         }
-               
 
         return arrayInt;
     }
@@ -480,22 +488,21 @@ public class Funciones {
         /*
          * Metodo Burbuja
          */
-        int  aux = 0;
-        
-        for (int i = 0; i < arrayInt.length-1; i++) {
+        int aux = 0;
+
+        for (int i = 0; i < arrayInt.length - 1; i++) {
             aux = arrayInt[i];
             // en el auxilar le meto el contenido del array
-            for (int j = i+1; j < arrayInt.length; j++) {
-                if (aux > arrayInt[j]) { 
+            for (int j = i + 1; j < arrayInt.length; j++) {
+                if (aux > arrayInt[j]) {
                     // si el ausiliar es igual que el contenido de arra
-                    arrayInt[i]= arrayInt[j];
-                    arrayInt[j] = aux; 
-                } 
+                    arrayInt[i] = arrayInt[j];
+                    arrayInt[j] = aux;
+                }
             }
         }
 
         return arrayInt;
     }
-
 
 }
