@@ -75,6 +75,18 @@ public class Funciones {
 
         return arrayInt;
     }
+    public static void muestroArray(String[] ArrayString) {
+        //meter un array que ya esta inicializado  para mostrarlo 
+        JOptionPane.showMessageDialog(null, "El array tiene un tamaño de " + ArrayString.length);
+
+        for (int i = 0; i < ArrayString.length; i++) {
+            // recorro el array y lo muestro
+            //JOptionPane.showMessageDialog(null,"Muesto la posicion " + i + " y su valor " + ArrayString[i] );
+            System.out.println(" Posicion " + i + " valor " + ArrayString[i]);
+        }
+
+    }
+
 
     public static void muestroArray(int[] arrayInt) {
         // Al meter un array ya esta inicializado al menos para mostrarlo tendría que
@@ -503,6 +515,48 @@ public class Funciones {
         }
 
         return arrayInt;
+    }
+
+    public static String[] metodoBurbujaLetras(String[] arrayString) {
+        /*
+         * Metodo Burbuja
+         */
+        // String[] arrayAbc = { "a", "d", "b", "g", "e", "f", "c" };
+        int aux = 0;
+        int[] arrayInt = new int[arrayString.length];
+        char[] arrayChar = new char[arrayString.length];
+        String palabra = "";
+        // doy tamaño del array
+        for (int i = 0; i < arrayString.length; i++) {
+            palabra = arrayString[i];
+            // paso a palabra el array desordenado
+            arrayInt[i] = palabra.charAt(0);
+            // una vez tengo el array de char relleno tengo que ordenarlo
+            // para ordenarlo tengo que pasarlo a int
+        }
+
+        for (int i = 0; i < arrayString.length - 1; i++) {
+            aux = arrayInt[i];
+            // en el auxilar le meto el contenido del array
+            for (int j = i + 1; j < arrayString.length; j++) {
+                if (aux > arrayInt[j]) {
+                    // si el auxiliar es igual que el contenido de arra
+                    arrayInt[i] = arrayInt[j];
+                    arrayInt[j] = aux;
+                    i--;
+                    break;
+                }
+            }
+        }
+
+        for (int i = 0; i < arrayString.length; i++) {
+            // paso int a char y  luego de char a String
+            arrayChar[i] = (char) arrayInt[i];
+            arrayString[i] = String.valueOf(arrayChar[i]);
+
+        }
+
+        return arrayString;
     }
 
 }

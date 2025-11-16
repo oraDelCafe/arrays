@@ -37,50 +37,26 @@ public class Main7y8 {
         int[] arrayPrueba2 = { 3, 2, 5, 7, 4, 6, 1 };
         int[] arrayPruebaVico = { 8, 3, 7, 2, 1, 10 };
         String[] arrayAbc = { "a", "d", "b", "g", "e", "f", "c" };
+
         int[] arrayPrueba3 = Funciones.metodoOrdenarArray(arrayPruebaVico);
         int[] arrayPrueba4 = Funciones.metodoBurbuja(arrayPruebaVico);
 
         for (int i = 0; i < arrayPrueba4.length; i++) {
             // recorro el array y lo muestro
-            System.out.print("P: " + i + " v : " + arrayPrueba4[i] + "/ ");
+            System.out.print("P: " + i + " v : " + arrayPrueba4[i] + " / ");
         }
+        System.out.println();
+
+        System.out.println("Array String desordenado  \n");
+        Funciones.muestroArray(arrayAbc);
+        System.out.println();
+        String[] arrayAbc2 = Funciones.metodoBurbujaLetras(arrayAbc);
+        System.out.println();
+        System.out.println("Array String ordenado  \n");
+        Funciones.muestroArray(arrayAbc2);
         System.out.println();
 
     }
 
-    public static String[] metodoBurbujaLetras(String[] arrayString) {
-        /*
-         * Metodo Burbuja
-         */
-        int aux = 0;
-        int[] arrayInt = new int[arrayString.length];
-        char[] arrayChar = new char[arrayString.length];
-        String palabra = "";
-        // doy tamaño del array
-        for (int i = 0; i < arrayString.length; i++) {
-            palabra = arrayString[i];
-            // paso a palabra el array desordenado
-            arrayChar[i] = palabra.charAt(0);
-            // una vez tengo el array de char relleno tengo que ordenarlo
-            // para ordenarlo tengo que pasarlo a int
-            arrayInt[i] = arrayChar[i];
-        }
-
-        /*
-         * for (int i = 0; i < arrayString.length - 1; i++) {
-         * aux = arrayString[i];
-         * // en el auxilar le meto el contenido del array
-         * for (int j = i + 1; j < arrayString.length; j++) {
-         * if (aux > arrayString[j]) {
-         * // si el ausiliar es igual que el contenido de arra
-         * arrayString[i] = arrayString[j];
-         * arrayString[j] = aux;
-         * }
-         * }
-         * }
-         */
-
-        return arrayString;
-    }
 
 }
