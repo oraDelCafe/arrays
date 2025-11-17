@@ -9,19 +9,15 @@ public class Principal {
 
     public static void main(String[] args) {
         int tam = 0;
-        int[] arrayMain;
+        int[] arrayMain = null;
+        // ponemos el valor a null para que no me de fallos
         boolean salir = false;
         Scanner sc = new Scanner(System.in);
         do {
-            System.out.println("Introduce el tamaño del Arrays");
+            System.out.println("Introduce el tamaño del Arrays ");
             try {
                 tam = sc.nextInt();
                 arrayMain = FuncionesArrays.genearaArrayAleatorios(tam);
-                System.out.println(Arrays.toString(arrayMain));
-                /*
-                 * metodo de Arrays que te da el contenido de array
-                 * Si se imprime sin este metodo te da la posicion en memoria *
-                 */
                 salir = true;
             } catch (IllegalArgumentException iae) {
                 System.out.println(iae.getMessage());
@@ -36,6 +32,14 @@ public class Principal {
             }
 
         } while (!salir);
+
+         System.out.println(Arrays.toString(arrayMain));
+                /*
+                 * metodo de Arrays que te da el contenido de array
+                 * Si se imprime sin este metodo te da la posicion en memoria *
+                 */
+        System.out.println("-----------------------");
+        FuncionesArrays.quitarDuplicados(arrayMain);
 
     }
 
