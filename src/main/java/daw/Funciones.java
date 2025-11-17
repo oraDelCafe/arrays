@@ -558,5 +558,35 @@ public class Funciones {
 
         return arrayString;
     }
+    public static String[] metodoOrdenoLetrasSort(String[] arrayString) {
+        /*
+         * Metodo ordenar letras no puede ordenar palabras
+         */
+        // String[] arrayAbc = { "a", "d", "b", "g", "e", "f", "c" };
+        int aux = 0;
+        int[] arrayInt = new int[arrayString.length];
+        char[] arrayChar = new char[arrayString.length];
+        String palabra = "";
+        // doy tamaño del array
+        for (int i = 0; i < arrayString.length; i++) {
+            palabra = arrayString[i];
+            // paso a palabra el array desordenado
+            arrayInt[i] = palabra.charAt(0);
+            // una vez tengo el array de char relleno tengo que ordenarlo
+            // para ordenarlo tengo que pasarlo a int
+        }
+
+        Arrays.sort(arrayInt);
+        // ordeno array int 
+
+        for (int i = 0; i < arrayString.length; i++) {
+            // paso int a char y  luego de char a String
+            arrayChar[i] = (char) arrayInt[i];
+            arrayString[i] = String.valueOf(arrayChar[i]);
+
+        }
+
+        return arrayString;
+    }
 
 }

@@ -1,4 +1,6 @@
-import daw.Funciones;
+package daw;
+
+import java.util.Arrays;
 
 public class MainBurbuja {
 
@@ -29,6 +31,18 @@ public class MainBurbuja {
         System.out.println();
         System.out.println("Array String ordenado  \n");
         Funciones.muestroArray(Funciones.metodoBurbujaLetras(arrayAbc));
+        System.out.println();
+
+        // desordeno
+        String[] arrayAbc2 = { "d", "b", "g", "a", "e", "f", "c" };
+
+        System.out.println("Array String desordenado  \n");
+        System.out.println(Arrays.toString(arrayAbc2));
+        System.out.println();
+
+        System.out.println();
+        System.out.println("Array String ordenado con Array sort  \n");
+        System.out.println(Arrays.toString(Funciones.metodoOrdenoLetrasSort(arrayAbc2)));
         System.out.println();
 
     }
