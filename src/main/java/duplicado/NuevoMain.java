@@ -16,12 +16,17 @@ public class NuevoMain {
          * en  * 
          */
 
-         int[] arrayInt = FuncionesArrays.inicializarArray(10);
+         int[] arrayInt = FuncionesArrays.inicializarArray(5);
 
          FuncionesArrays.rellenoArray(arrayInt);
-         // relleno array 
-
          System.out.println(Arrays.toString(arrayInt));
+         // relleno array 
+         int [] arrayInt2 = FuncionesArrays.cuentoContenido(arrayInt);
+         // este tiene tamaño 5 
+
+         FuncionesArrays.cuentoContenidoYMuestro(arrayInt2);
+
+         
 
 
     }
