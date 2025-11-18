@@ -503,11 +503,11 @@ public class Funciones {
         int aux = 0;
 
         for (int i = 0; i < arrayInt.length - 1; i++) {
-            aux = arrayInt[i];
             // en el auxilar le meto el contenido del array
             for (int j = i + 1; j < arrayInt.length; j++) {
-                if (aux > arrayInt[j]) {
+                if (arrayInt[i] > arrayInt[j]) {
                     // si el ausiliar es igual que el contenido de arra
+                    aux = arrayInt[i];
                     arrayInt[i] = arrayInt[j];
                     arrayInt[j] = aux;
                 }

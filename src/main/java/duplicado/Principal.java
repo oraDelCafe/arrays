@@ -41,6 +41,8 @@ public class Principal {
         System.out.println("-----------------------");
         FuncionesArrays.quitarDuplicados(arrayMain);
 
+       
+
     }
 
 }
