@@ -151,19 +151,20 @@ public class FuncionesArrays {
     }
 
     public static int[] cuentoContenido(int[] arrayInt) {
-        // mirar este en casa
         /*
          * Funcion a apartir de esta funcion obtener otro
          * con tamaño 5 y contar los numeros que corresponde a esa posicion.
          */
         int[] respuestaInt = new int[5];// tamaño 5
-        int aux = 1;
         for (int i = 0; i < arrayInt.length; i++) {// 10
-            aux += i;
             for (int j = 0; j < respuestaInt.length; j++) {
-                
+                // importante resetear aux a 1
+                int aux = 1;
+                aux += j;
                 if (aux == arrayInt[i]) {
+                    // si entro relleno en la posicion y break para pasar al bucle i
                     respuestaInt[j] += 1;
+                    break;
                 }
             }
         }
@@ -178,19 +179,19 @@ public class FuncionesArrays {
          * Funcion a apartir de esta funcion obtener otro
          * con tamaño 5 y contar los numeros que corresponde a esa posicion.
          */
-       // String[] respuestaString = new String[arrayInt.length];// tamaño 5
-        int[] respuestaString = new int[arrayInt.length];// tamaño 5
-        String aux = "*", espacio = " ";
-        int contador = 0 ;
-        
+        String[] respuestaString = new String[arrayInt.length];// tamaño 5
+        Arrays.fill(respuestaString, " ");
+        //relleno de espacios
+        String estrellita = "* ";
+        int contador = 0;
+
         for (int i = 0; i < arrayInt.length; i++) {// 5
-            for (int j = 0; j < arrayInt[i]; j++) {//3
-                respuestaString[i] +=  2;
-                
+            for (int j = 0; j < arrayInt[i]; j++) {// 3
+                respuestaString[i] += estrellita;
+
             }
         }
         System.out.println(Arrays.toString(respuestaString));
-        
 
     }
 

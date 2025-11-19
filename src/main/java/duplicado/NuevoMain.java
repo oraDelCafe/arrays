@@ -16,9 +16,15 @@ public class NuevoMain {
          * en  * 
          */
 
-         int[] arrayInt = FuncionesArrays.inicializarArray(5);
+         int[] arrayInt = FuncionesArrays.inicializarArray(10);
 
-         FuncionesArrays.rellenoArray(arrayInt);
+         //FuncionesArrays.rellenoArray(arrayInt);
+         
+         for (int i = 0; i < arrayInt.length; i++) {
+            // recorro todas las iteraciones del array
+            arrayInt[i] = daw.Funciones.r.nextInt(1,6);
+        }
+        /*QUITAR LUEGO */
          System.out.println(Arrays.toString(arrayInt));
          // relleno array 
          int [] arrayInt2 = FuncionesArrays.cuentoContenido(arrayInt);
